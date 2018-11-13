@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./crop-and-send-pdf $@
+rm *.pdf

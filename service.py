@@ -56,7 +56,7 @@ async def save_pdf_response(paper_id, fname):
                 with path.open('wb') as out_file:
                     out_file.write(pdf_data)
                 subprocess.call([
-                    './crop-and-send-pdf', str(path),
+                    './crop-and-send-pdf-then-delete-all', str(path),
                 ])
             else:
                 raise Exception('Bad Response')

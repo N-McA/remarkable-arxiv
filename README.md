@@ -1,7 +1,9 @@
 
 # Crop+Send Arxiv Papers to your Remarkable with one click.
 
-This is a bookmarklet that calls a local python server that downloads, crops and sends the file. You need to have a couple of things locally, namely
+This is a one-click bookmarklet that calls a local python server that downloads, crops and sends the file. Cropping takes ~10 seconds or so.
+
+You need to have a couple of things locally, namely
 
 ```
 ghostscript (sudo apt-get install ghostscript)
@@ -19,3 +21,7 @@ After that's done, you can do `pipenv run service.py` and navigate to `{wherever
 If you want to make sure the service is always running, then start it on startup.
 
 The libraries that do all the hard work are `rmapi` and `pdfCropMargins`, which more or less rock. 
+
+security - hideously insecure I imagine. Apart from anything else, there's a shell injection from arxiv titles that would be hilarious to execute.
+
+This software is provided without warranty, implicit or otherwise.
