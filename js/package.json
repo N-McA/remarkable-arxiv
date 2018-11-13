@@ -1,0 +1,13 @@
+{
+  "name": "remarkable-arxiv",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Nat McAleese",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-terser": "^1.1.5",
+    "pump": "^3.0.0"
+  }
+}

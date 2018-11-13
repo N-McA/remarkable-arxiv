@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+echo $1
+if pdf-crop-margins --modifyOriginal --uniformOrderPercent 10 --percentRetain 20 $1 ; then
+    # Crop without gsFix worked
+    echo ""
+else
+    pdf-crop-margins --modifyOriginal --gsFix --uniformOrderPercent 10  --percentRetain 20 $1
+fi
+
+rmapi put $1
